@@ -6,9 +6,9 @@
         <h4>{{student.first_name}}</h4>
         <h4>{{student.last_name}}</h4>
         <p>{{student.experience}}</p>
-        <p>{{student.education}}</p>
-        <p>{{student.skills}}</p>
-        <p>{{student.capstone}}</p>
+        <p>{{student.photo}}</p>
+        <p>{{student.job_title}}</p>
+        <p>{{student.company}}</p>
         <router-link v-bind:to="`/students/${student.id}`">More details</router-link>
       </div>
     </div>
@@ -27,7 +27,7 @@ export default {
     };
   },
   created: function() {
-    this.students = [{ first_name: "first_name", last_name: "last_name",  experience: "experience", education: "education", skills: "skills", capstone: "capstone"}];
+    this.students = [{ first_name: "first name", last_name: "last name",  experience: "experience", photo: "photo", job_title: "job title", company: "company"}];
     console.log(this.students)
     // axios.get("/api/users").then(response => (this.users = response.data));
   },
