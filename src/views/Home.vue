@@ -1,14 +1,92 @@
 <template>
   <div class="container">
+    <!-- One -->
+    <section
+      class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
+    >
+      <div class="content">
+        <h1>Story</h1>
+        <p class="major">
+          A (modular, highly tweakable) responsive one-page template designed by
+          <a href="https://html5up.net">HTML5 UP</a>
+          and released for free under the
+          <a href="https://html5up.net/license">Creative Commons</a>
+          .
+        </p>
+        <!--  <ul class="actions stacked">
+            <li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+          </ul> -->
+      </div>
+      <div class="image">
+        <img src="images/banner.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Two -->
+    <section
+      class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+      id="first"
+    >
+      <div class="content">
+        <h2>Magna etiam feugiat</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel
+          massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium
+          massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.
+        </p>
+        <ul class="actions stacked">
+          <li><a href="/students/1" class="button">view resume</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="images/spotlight01.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Three -->
+    <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+      <div class="content">
+        <h2>Tempus adipiscing</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel
+          massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium
+          massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.
+        </p>
+        <ul class="actions stacked">
+          <li><a href="#" class="button">Learn More</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="images/spotlight02.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Four -->
+    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+      <div class="content">
+        <h2>Pharetra etiam nulla</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel
+          massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium
+          massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.
+        </p>
+        <ul class="actions stacked">
+          <li><a href="#" class="button">Learn More</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="images/spotlight03.jpg" alt="" />
+      </div>
+    </section>
     <h2>all students</h2>
     <div class="card-body">
       <div v-for="student in students" class="card">
         <h4>{{ student.first_name }}</h4>
         <h4>{{ student.last_name }}</h4>
         <p>{{ student.experience }}</p>
-        <p>{{ student.education }}</p>
-        <p>{{ student.skills }}</p>
-        <p>{{ student.capstone }}</p>
+        <p>{{ student.photo }}</p>
+        <p>{{ student.job_title }}</p>
+        <p>{{ student.company }}</p>
         <router-link v-bind:to="`/students/${student.id}`">More details</router-link>
       </div>
     </div>
@@ -29,12 +107,13 @@ export default {
   created: function() {
     this.students = [
       {
-        first_name: "first_name",
-        last_name: "last_name",
+        id: 1,
+        first_name: "first name",
+        last_name: "last name",
         experience: "experience",
-        education: "education",
-        skills: "skills",
-        capstone: "capstone"
+        photo: "photo",
+        job_title: "job title",
+        company: "company"
       }
     ];
     console.log(this.students);
