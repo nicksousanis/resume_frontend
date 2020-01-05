@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h2>{{ user[0].first_name }} {{ user[1].last_name }}</h2>
+    <h2>{{ student[0].first_name }} {{ student[0].last_name }}</h2>
     <h1>Experience</h1>
 
     <h1>Education</h1>
@@ -18,13 +18,15 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      user: []
+      student: []
     };
   },
   created: function() {
-    this.user = [{ first_name: "Eddie" }, { last_name: "O" }];
+    this.student = [{ first_name: "Eddie", last_name: "O" }];
     console.log(this.user);
-    // axios.get("/api/users").then(response => (this.users = response.data));
+    axios.get("/api/students/" + this.$route.params.id).then(response => {
+      this.student = response.data;
+    });
   },
   methods: {}
 };
