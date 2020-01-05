@@ -1,18 +1,45 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2>{{ message }}</h2>
+    <h1>Experience</h1>
+    <div v-for="user in users">
+      {{ user.first_name }}
+      {{ user.last_name }}
+    </div>
+    <h1>Education</h1>
+    <div v-for="user in users">
+      {{ user.first_name }}
+      {{ user.last_name }}
+    </div>
+    <h1>Skills</h1>
+    <div v-for="user in users">
+      {{ user.first_name }}
+      {{ user.last_name }}
+    </div>
+    <h1>Capstone</h1>
+    <div v-for="user in users">
+      {{ user.first_name }}
+      {{ user.last_name }}
+    </div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<style></style>
 
+<script>
+import axios from "axios";
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+  data: function() {
+    return {
+      message: "Your profile",
+      users: []
+    };
+  },
+  created: function() {
+    this.users = [{ first_name: "Eddie" }, { last_name: "O" }, { first_name: "Eddie" }, { last_name: "O" }];
+    console.log(this.users);
+    // axios.get("/api/users").then(response => (this.users = response.data));
+  },
+  methods: {}
+};
 </script>
