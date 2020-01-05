@@ -50,7 +50,14 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.show {
+  background-image: url("https://cdn.britannica.com/16/77416-120-6D5A3D41/volcano-Mount-St-Helens-south-eruption-May-18-1980.jpg");
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-size: 100%;
+}
+</style>
 
 <script>
 import axios from "axios";
