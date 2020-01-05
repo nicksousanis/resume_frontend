@@ -78,18 +78,6 @@
         <img src="images/spotlight03.jpg" alt="" />
       </div>
     </section>
-    <h2>all students</h2>
-    <div class="card-body">
-      <div v-for="student in students" class="card">
-        <h4>{{ student.first_name }}</h4>
-        <h4>{{ student.last_name }}</h4>
-        <p>{{ student.experience }}</p>
-        <p>{{ student.photo }}</p>
-        <p>{{ student.job_title }}</p>
-        <p>{{ student.company }}</p>
-        <router-link v-bind:to="`/students/${student.id}`">More details</router-link>
-      </div>
-    </div>
   </div>
 </template>
 
