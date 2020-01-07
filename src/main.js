@@ -6,7 +6,7 @@ Vue.config.productionTip = false;
 
 import axios from "axios";
 
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "https://boiling-chamber-46600.herokuapp.com" : "/";
 
 new Vue({
   router,
