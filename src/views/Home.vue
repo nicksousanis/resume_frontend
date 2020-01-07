@@ -15,7 +15,10 @@
           </ul> -->
       </div>
       <div class="image">
-        <img src="images/banner.jpg" alt="" />
+        <img
+          src="https://3.bp.blogspot.com/-EIKFTK5S1x0/XEfHGeFldPI/AAAAAAAAFfc/I-BWVv9aQ484_Ua9GjqLW7i4EeDNh_QNACHMYCw/s1600/cabling-%25E2%2580%2594-connell-communications.jpg"
+          alt=""
+        />
       </div>
     </section>
 
